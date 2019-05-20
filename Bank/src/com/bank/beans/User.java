@@ -16,6 +16,11 @@ public abstract class User {
 		this.dob = dob;
 		
 	}
+	@Override
+	public String toString() {
+		return "User [userName=" + userName + ", name=" + name + ", address=" + address + ", dob=" + dob
+				+ ", accountType=" + accountType + "]";
+	}
 	//getters and setters
 	public String getUserName() {
 		return userName;

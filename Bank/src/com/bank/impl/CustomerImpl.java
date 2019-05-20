@@ -12,11 +12,13 @@ public class CustomerImpl {
 		switch(accountType) {
 		case "Checking":
 			CheckingAccount ca = new CheckingAccount();
+			c.accountNum++;
 			c.accounts.put(c.accountNum, ca);
 			break;
 		case "Savings":
 			SavingsAccount sa = new SavingsAccount();
-			c.accounts.add(sa);
+			c.accountNum++;
+			c.accounts.put(c.accountNum, sa);
 			break;
 		}
 	}
@@ -31,6 +33,6 @@ public class CustomerImpl {
 	    System.out.println("* Select an account: ");
 	    showAccounts(c);
 	    int account = scanner.nextInt();  // Read user input
-	    c.accounts.
+	    //c.accounts.
 	}
 }

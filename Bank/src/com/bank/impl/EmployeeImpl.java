@@ -28,8 +28,17 @@ public class EmployeeImpl {
 	public static void insertUser(User u) {
 		Bank.usr.put(u.userName, u);
 	}
-	public static void deleteCustomer(String un, Customer c) {
-		Bank.usr.remove(un);
+	public static void deleteCustomer(Customer c) {
+		Bank.usr.remove(c.userName);
 	}
-	
+	public static void manageCustomer(Employee e, Customer c) {
+		e.manages.add(c);
+		System.out.println("Employee: " + e.userName + " manages Customer: " + c.userName);
+	}
+	public static void displayManaged(Employee e) {
+		System.out.println("Employee: " + e.userName + " manages Customers: ");
+		for(Customer c:e.manages) {
+			System.out.println(c.toString());
+		}
+	}
 }
